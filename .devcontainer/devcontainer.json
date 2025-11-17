@@ -14,7 +14,10 @@
       "settings": {
         "terminal.integrated.defaultProfile.linux": "bash"
       },
-      "extensions": ["mshr-h.veriloghdl", "surfer-project.surfer"]
+      "extensions": [
+        "mshr-h.veriloghdl",
+        "surfer-project.surfer"
+      ]
     }
   },
   "features": {
@@ -25,5 +28,5 @@
       "dockerDashComposeVersion": "none"
     }
   },
-  "postStartCommand": "/ttsetup/copy_tt_support_tools.sh"
+  "postStartCommand": "echo 'finished'"
 }

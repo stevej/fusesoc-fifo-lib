@@ -1,0 +1,37 @@
+CAPI=2:
+name: "stevej:cores:stevej_fifo:0.0.1"
+description: a synchronous FIFO with First Word Fall Through, Almost Full, and Almost Empty features
+
+filesets:
+  rtl:
+    files:
+      - src/fifo.v : {file_type: verilogSource}
+      - src/tt_um_fifo_stevej.v : {file_type: verilogSource}
+      - tb/tb.v : {file_type: verilogSource}
+      - tb/test_fifo.py : {file_type: user, copyto: .}
+    depend: [vlog_tb_utils]
+
+targets:
+  default:
+    flow: sim
+    flow_options:
+      tool: icarus
+      cocotb_module: test_fifo
+      timescale: 1ns/1ns
+      vcs_options: [-timescale=1ns/1ns]
+    filesets : [rtl]
+#    parameters: [INDEX_WIDTH=4, ALMOST_FULL_THRESHOLD=12, ALMOST_EMPTY_THRESHOLD=4]
+    toplevel: tb
+
+parameters:
+  INDEX_WIDTH:
+    datatype: int
+    paramtype: vlogparam
+
+  ALMOST_FULL_THRESHOLD:
+    datatype: int
+    paramtype: vlogparam
+
+  ALMOST_EMPTY_THRESHOLD:
+    datatype: int
+    paramtype: vlogparam

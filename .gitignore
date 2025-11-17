@@ -1,3 +1,5 @@
+fusesoc_libraries
+build
 .DS_Store
 .idea
 *.vcd
@@ -10,3 +12,4 @@ test/sim_build
 test/__pycache__/
 test/results.xml
 test/gate_level_netlist.v
+fuseoc_libraries
