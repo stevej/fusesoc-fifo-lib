@@ -24,6 +24,8 @@ jobs:
         run: pip install -r test/requirements.txt
 
       - name: Run tests
+        env:
+          PYGPI_PYTHON_BIN: "/usr/bin/python"
         run: |
           fusesoc --cores-root . run stevej_fifo
 
