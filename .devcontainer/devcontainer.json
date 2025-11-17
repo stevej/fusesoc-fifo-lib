@@ -28,5 +28,5 @@
       "dockerDashComposeVersion": "none"
     }
   },
-  "postStartCommand": "pip3 install -r test/requirements.txt"
+  "postCreateCommand": "pip3 install -r test/requirements.txt"
 }
