@@ -21,7 +21,6 @@ RUN umask 022 && \
     tar zxf - -C /usr/local --strip-components=1 && \
     chmod 755 /usr/local/bin
 
-
 # TODO: Install symbiyosys for formal testing
 RUN /app/src/install-oss-cad.sh
 # Install LibreLane
