@@ -27,6 +27,5 @@
       "version": "latest",
       "dockerDashComposeVersion": "none"
     }
-  },
-  "postCreateCommand": "pip3 install -r test/requirements.txt && /workspaces/fusesoc-fifo-lib/src/install-oss-cad.sh"
+  }
 }

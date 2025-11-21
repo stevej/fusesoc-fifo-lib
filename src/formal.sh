@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-export PATH=$PATH:/workspaces/fusesoc-fifo-lib/oss-cad-suite/bin
+export PATH=$PATH:/app/oss-cad-suite/bin
 
 set -ex
 
