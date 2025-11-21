@@ -35,5 +35,5 @@ jobs:
         working-directory: ./src
         shell: bash
         run: |
-          fusesoc library add --sync-type local  .
+          fusesoc library add --sync-type local  --no-auto-sync .
           fusesoc --cores-root . run --target formal stevej_fifo
