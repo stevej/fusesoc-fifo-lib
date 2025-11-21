@@ -22,6 +22,14 @@ targets:
     filesets : [rtl]
 #    parameters: [INDEX_WIDTH=4, ALMOST_FULL_THRESHOLD=12, ALMOST_EMPTY_THRESHOLD=4]
     toplevel: tb
+  formal: # for using formal methods on the source base.
+    flow: sim
+    flow_options:
+      tool: icarus
+    hooks: 
+      pre_build:
+      - run_symbiyosys
+    toplevel: tb
 
 parameters:
   INDEX_WIDTH:
@@ -35,3 +43,9 @@ parameters:
   ALMOST_EMPTY_THRESHOLD:
     datatype: int
     paramtype: vlogparam
+
+
+scripts:
+  run_symbiyosys:
+    cmd: ["/bin/bash", "/workspaces/fusesoc-fifo-lib/src/formal.sh"]
+    filesets: [rtl]

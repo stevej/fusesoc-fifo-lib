@@ -1,5 +1,8 @@
 #!/bin/bash
 
+
+export PATH=$PATH:/workspaces/fusesoc-fifo-lib/oss-cad-suite/bin
+
 set -ex
 
 sby -f formal.sby bmc

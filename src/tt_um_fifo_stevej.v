@@ -1,6 +1,10 @@
 `default_nettype none
 `timescale 1ns/1ps
 
+`ifdef FORMAL
+`include "fifo.v"
+`endif
+
 module tt_um_fifo_stevej (
     `ifdef GL_TEST
         .VPWR( 1'b1),
