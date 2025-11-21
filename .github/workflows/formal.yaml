@@ -35,5 +35,5 @@ jobs:
         working-directory: ./src
         shell: bash
         run: |
-          fusesoc add . stevej_fifo
+          fusesoc library add . stevej_fifo
           fusesoc --cores-root . run --target formal stevej_fifo
