@@ -25,8 +25,11 @@ jobs:
       - name: install oss-cad-suite
         uses: YosysHQ/setup-oss-cad-suite@v3
 
-      - name: fusesoc list-cores debug output
-        run: fusesoc list-cores
+      - name: fusesoc debug output
+        run: |
+          fusesoc list-cores
+          fusesoc list-paths
+          fusesoc core-info stevej_fifo
 
       - name: Run formal tests
         working-directory: ./src
