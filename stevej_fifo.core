@@ -47,5 +47,5 @@ parameters:
 
 scripts:
   run_symbiyosys:
-    cmd: ["/bin/bash", "/workspaces/fusesoc-fifo-lib/src/formal.sh"]
+    cmd: ["/bin/bash", "formal.sh"]
     filesets: [rtl]
