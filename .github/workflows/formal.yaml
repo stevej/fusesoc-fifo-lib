@@ -44,4 +44,4 @@ jobs:
         working-directory: ./src
         shell: bash
         run: |
-          fusesoc --verbose run --target formal stevej_fifo
+          fusesoc --core-root $GITHUB_WORKSPACE/$REPO --verbose run --target formal stevej_fifo
