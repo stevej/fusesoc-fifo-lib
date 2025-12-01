@@ -47,5 +47,5 @@ parameters:
 
 scripts:
   run_symbiyosys:
-    cmd: ["/bin/bash", "formal.sh"]
+    cmd: ["/bin/bash", "src/formal.sh"]
     filesets: [rtl]
