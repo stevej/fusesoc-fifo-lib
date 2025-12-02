@@ -18,9 +18,18 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: edalize setup
+        run: echo "EDALIZE_LAUNCHER=el_docker" >> $GITHUB_ENV
+
       - name: Install Python packages
         shell: bash
         run: pip install -r requirements.txt
+
+      - name: setup fusesoc dependencies
+        run: fusesoc library add https://github.com/fusesoc/fusesoc-cores
+
+      - name: setup fusesoc with local environment
+        run: fusesoc library add $REPO $GITHUB_WORKSPACE/$REPO
 
       - name: install oss-cad-suite
         uses: YosysHQ/setup-oss-cad-suite@v3

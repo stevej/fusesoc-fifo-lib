@@ -23,6 +23,9 @@ jobs:
         shell: bash
         run: pip install -r requirements.txt
 
+      - name: setup fusesoc dependencies
+        run: fusesoc library add https://github.com/fusesoc/fusesoc-cores
+
       - name: Run tests
         env:
           PYGPI_PYTHON_BIN: "/usr/bin/python"
